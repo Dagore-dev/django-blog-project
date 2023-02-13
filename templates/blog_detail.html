@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="post-entry">
-    <h2>{{ object.title }}</h2>
-    <p>{{ object.body }}</p>
-  </div>
+    <div class="post-entry">
+        <h2>{{ object.title }}</h2>
+        <p>{{ object.body }}</p>
+    </div>
+
+    <a href="{% url 'blog_edit' object.pk %}">Editar blog</a>
 {% endblock content %}
