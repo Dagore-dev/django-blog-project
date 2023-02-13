@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Eliminar blog{% endblock title %}
+
+{% block content %}
+    <h2>Eliminar Blog</h2>
+
+    <form action="post">
+        {% csrf_token %}
+
+        <p>
+            ¿Seguro que quiere borrar "{{ object.title }}"?
+        </p>
+
+        <input type="submit" value="Confirmar">
+    </form>
+{% endblock content %}
