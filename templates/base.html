@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <title>{% block title %}{% endblock title %}</title>
 </head>
+
+<header>
+    <div class="nav-left">
+        <a href="{% url 'blog_list' %}"><h1>Django Blog</h1></a>
+    </div>
+
+    <div class="nav-right">
+        <a href="{% url 'blog_new' %}">Nuevo Post</a>
+    </div>
+</header>
+
 <body>
     <div class="container">
         {% block content %}{% endblock content %}
